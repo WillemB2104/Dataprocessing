@@ -1,0 +1,19 @@
+Questions for discussion:
+
+Who is the intended audience?
+Cinephilics
+
+What tasks does the visualization enable?
+Comparisons and orginazation between weekly box office revenue over time, longevity and total domestic gross for different films.
+
+What data is represented in this visualization? Be specific.
+weekly box office revenue over time, longevity and toatl gross of different films. 
+
+How is each data type visually encoded?
+Weekly box office revenue is represented by the height of each movie shape. The width corresponds to the longevity of the movie, and its color corresponds to the total domestic gross.
+
+How do the visual elements and user interactions support the tasks?
+By hovering your cursur over the different movie elements one can see the area under the curve, and by clicking a movie a short synopsis pops up.
+
+Why do you like / dislike this visualization?
+It looks pretty. However, too much information: you have to judge all different segments which make comparisons hard, the x-axis scale is not uniform. Also there is no y-axis  which makes it hard to interpret the organization of this data.

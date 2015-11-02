@@ -6,7 +6,6 @@ This script scrapes IMDB and outputs a CSV file with highest ranking tv series.
 '''
 # IF YOU WANT TO TEST YOUR ATTEMPT, RUN THE test-tvscraper.py SCRIPT.
 import csv
-import sqlite3
 
 from pattern.web import URL, DOM, plaintext
 
