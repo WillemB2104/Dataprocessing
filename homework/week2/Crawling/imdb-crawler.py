@@ -90,7 +90,23 @@ class UnicodeWriter(object):
             self.writerow(row)
 
 # --------------------------------------------------------------------------
+# Helper function: concatenates list of elements to string, separated by semicolons
+
+
+def concatenate(item_list):
+    item_string = ''
+    count = 0
+    length = len(item_list)
+    for item in item_list:
+        item_string += item.content
+        count += 1
+        if count != length and length > 1:
+            item_string += ';'
+    return item_string
+
+# --------------------------------------------------------------------------
 # Utility functions (no need to edit):
+
 
 def create_dir(directory):
     '''
@@ -190,6 +206,10 @@ def main():
             html_file = os.path.join(BACKUP_DIR, 'movie-%03d.html' % i)
             make_backup(html_file, movie_html)
 
+        # Test CSV output
+        # if i == 5:
+        #     save_csv(os.path.join(SCRIPT_DIR, 'top250movies.csv'), rows)
+
     # Save a CSV file with the relevant information for the top 250 movies.
     print 'Saving CSV ...'
     save_csv(os.path.join(SCRIPT_DIR, 'top250movies.csv'), rows)
@@ -216,13 +236,8 @@ def scrape_top_250(url):
     dom = DOM(URL(url).download(cached=True))
     list = dom.by_class("lister-list")[0]
     for row in list.by_class("titleColumn"):
-        # link_tag = row.by_tag("a")[0]
-        # link = link_tag.attrs.get("href","")
-        # link = abs(link, base=url.redirect or url.string)
-        # movie_urls.append(link)
         movie_urls.append(abs(row.by_tag("a")[0].attrs.get("href",""), base=url.redirect or url.string))
     # return the list of URLs of each movie's page on IMDB
-    # print movie_urls
     return movie_urls
 
 
@@ -242,58 +257,19 @@ def scrape_movie_page(dom):
         of ratings.
     '''
     # YOUR SCRAPING CODE GOES HERE:
+    movie_list = []
     title = dom.by_class("header")[0].by_class("itemprop")[0].content
-
     duration = dom.by_class("infobar")[0].by_tag("time")[0].content.replace("min", "").strip()
-
-    genres = ''
-    genre_count = 0
-    genre_list = dom.by_class("infobar")[0].by_attr(itemprop="genre")
-    genre_length = len(genre_list)
-    for genre in genre_list:
-        genres += genre.content.encode('utf-8')
-        genre_count += 1
-        if genre_count != genre_length and genre_length > 1:
-            genres += ';'
-
-    directors = ''
-    director_count = 0
-    director_list = dom.by_attr(itemprop="director")[0].by_attr(itemprop="name")
-    director_length = len(director_list)
-    for director in director_list:
-        directors += director.content.encode('utf-8')
-        director_count += 1
-        if director_count != director_length and director_length > 1:
-            directors += ';'
-
-    writers = ''
-    writer_count = 0
-    writer_list = dom.by_attr(itemprop="creator")[0].by_attr(itemprop="name")
-    writer_length = len(writer_list)
-    for writer in writer_list:
-        writers += writer.content.encode('utf-8')
-        writer_count += 1
-        if writer_count != writer_length and writer_length > 1:
-            writers += ';'
-
-    actors = ''
-    actor_count = 0
-    actor_list = dom.by_attr(itemprop="actors")[0].by_attr(itemprop="name")
-    actor_length = len(actor_list)
-    for actor in actor_list:
-        actors += actor.content.encode('utf-8')
-        actor_count += 1
-        if actor_count != actor_length and actor_length > 1:
-            actors += ';'
-
-    rating = []
-    n_ratings = []
-
+    genres = concatenate(dom.by_class("infobar")[0].by_attr(itemprop="genre"))
+    directors = concatenate(dom.by_attr(itemprop="director")[0].by_attr(itemprop="name"))
+    writers = concatenate(dom.by_attr(itemprop="creator")[0].by_attr(itemprop="name"))
+    actors = concatenate(dom.by_attr(itemprop="actors")[0].by_attr(itemprop="name"))
+    rating = dom.by_class("star-box giga-star")[0].by_attr(itemprop="ratingValue")[0].content
+    n_ratings = dom.by_class("star-box giga-star")[0].by_attr(itemprop="ratingCount")[0].content.replace(",", "")
+    movie_list.extend([title, duration, genres, directors, writers, actors, rating, n_ratings])
     # Return everything of interest for this movie (all strings as specified
     # in the docstring of this function).
-    return title, duration, genres, directors, writers, actors, rating, \
-        n_ratings
-
+    return movie_list
 
 if __name__ == '__main__':
     main()  # call into the progam
