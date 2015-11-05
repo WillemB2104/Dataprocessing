@@ -1,0 +1,83 @@
+Design Critique Week 2:
+Willem Bruin
+10209735
+
+Figure url:
+http://iibh.apphb.com/
+
+What tasks does the visualization enable?
+It enable the representation of data: audience & critics rating for different movies; resized to represent various measures of financial succes.
+Organized 
+Correlations: this visualization shows the relation between critics and audience rating 
+The audience (almost) never overwhelmingly dislikes a movie. The only exception raked more than six times its budget in revenue!
+The critics ratings are evenly distributed across all categories
+The audience and critics seldom agree that a movie was bad
+The audience rarely strongly disagrees with critics when the latter likes a movie.
+
+What data is represented in this visualization? How is each data type visually encoded?
+color audience & critics ratings
+size to represent various measures of financial succes
+y axis rating
+x axis diffference in audience vs critic rating
+white border = price
+positie
+
+What design principles are at work in this visualization? Be specific.
+----	
+
+Do they support the tasks and enhance the meaning of the visualization?
+	
+
+What would you do differently to better support understanding?
+	
+
+Why do you like / dislike this visualization
+	
+As a graphic designer, I could tell you if your website design is C.R.A.P. Not crap as in crap crap, but I mean C.R.A.P as in the underlying principles of good design.
+
+C.R.A.P stands for contrast, repeitition, alignment and proximity and these are the four principles of design that a blog design should adhere to.
+
+The Joshua Tree
+
+To get your head around the c.ra.p. principles let me tell you a true story aptly named The Joshua Tree from Robin Williams book, the Non Designers Type Book.
+
+Once upon a time, Robin received a tree identifying book where you could match a tree up with its name by looking at its picture. Robin decided to go out and identify the trees in the neighborhood. Before she went out, she read through part of the book.The first tree in the book was the Joshua tree because it only took two clues to identify it.
+
+Now the Joshua tree is a really weird-looking tree and she looked at that picture and said to herself "Oh, we don’t have that kind of tree in Northern California. That is a weird-looking tree. I would know if I saw that tree, and I’ve never seen one before.
+
+So she took the book and went outside. Her parents lived in a cul-de-sac of six homes. Four of those homes had Joshua trees in the front yard. She had lived in that house for thirteen years, and she had never seen a Joshua tree.
+
+She took a walk around the block – at least 80 percent of the homes had Joshua trees in the front yards. And she had sworn she had never seen one before!
+
+The moral of the story? Once Robin was conscious of the tree, once she could name it, she saw could see it everywhere. Which is exactly my point. Once you can name something, you’re conscious of it. You have power over it. You own it. You’re in control.
+
+The four basic principles
+
+So now you’re going to learn the names of four of the main design principles that can be applied to any design piece at all. You are going to be in control of your pages and website as a whole.
+
+The following is a brief overview of the principles. Although these are discussed separately, keep in mind they are really interconnected, rarely will you apply only one principle.
+
+CRAP - Design principles
+1. Contrast
+The idea behind contrast is to avoid elements on the page that are merely similar. If the elements (type, color, size, line thickness, shape, space, etc.) are not the same, then make them very different. Contrast is often the most important visual attraction on a page.
+
+Can you see the difference between your content, ads, headings, body copy and comments?
+2. Repetition
+Repeat visual elements of the design throughout the piece. You can repeat color, shape, texture, spatial relationships, line thicknesses, sizes, etc. This helps develop the organization and strengthens the unity.
+
+Do you have a consistent theme or brand throughout your site? Do you reuse the same colour, shapes, blockquotes, formatting for all of your articles?
+3. Alignment
+Nothing should be placed on the page arbitrarily. Every element should have some visual connection with another element on the page. This creates a clean, sophisticated, fresh took,
+
+Does everything line up or have you got things centred, left aligned or out of place?
+4. Proximity
+Items relating to each other should be grouped close together. When several items are in close proximity to each other, they become one visual unit rather than several separate units. This helps organize information and reduces clutter.
+
+Can you find everything you need on your page easily? What is it that your visitors are looking for?
+
+TUFTE - 
+http://thedoublethink.com/2009/08/tufte%E2%80%99s-principles-for-visualizing-quantitative-information/
+
+
+Visuele variabele -
+
