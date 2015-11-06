@@ -240,16 +240,16 @@ function createTransform(domain, range){
 	// domain is a two-element array of the domain's bounds
 	// range is a two-element array of the range's bounds
 	// implement the actual calculation here
-	var beta = range[0] - domain[0];
+	var beta = range[0]
 	var alpha = (range[1] - range[0]) / (domain[1] - domain[0])
 	return function(x){
-		return alpha * x + beta;
+		return alpha * (x - domain[0]) + beta;
 	};
 }
 
 // to use this for instance:
-var transform = createTransform([0, 10], [10, 30]);
-console.log(transform(5)); //should return 15!!
+var transform = createTransform([10, 20], [0, 30]);
+console.log(transform(15)); //should return 15!!
 
 
 // Make sure to test your createTransform function thouroughly
