@@ -1,0 +1,31 @@
+#wrapper {
+    width: 1000px;
+    margin: auto;
+}
+
+#header {
+    background-color: #FF7F50;
+    color: white;
+    text-align: center;
+    font-size: 30px;
+    font-family: Trebuchet MS;
+    height: 100px;
+}
+
+#rawdata {
+    display: none;
+}
+
+#canvas {
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin:auto;
+    -moz-transform: scale(1, -1);
+    -webkit-transform: scale(1, -1);
+    -o-transform: scale(1, -1);
+    transform: scale(1, -1);
+    filter: FlipH;
+}
