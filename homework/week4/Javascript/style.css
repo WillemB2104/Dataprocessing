@@ -1,0 +1,39 @@
+#wrapper {
+    width: 1000px;
+    margin: auto;
+}
+
+#rawdata {
+    display: none;
+}
+
+#canvas {
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin:auto;
+    z-index: 0;
+}
+
+#tooltip_temp, #tooltip_date {
+    padding: 5px;
+    font-size: 10;
+    position: absolute;
+    color: white;
+    background-color: black;
+    z-index: 1;
+    visability: hidden;
+}
+
+#mask {
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin:auto;
+    z-index: 1;
+}
+
