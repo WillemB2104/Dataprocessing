@@ -1,0 +1,31 @@
+.center {
+    margin: auto;
+    width: 60%;
+    border:2px solid #000000;
+    padding: 10px;
+    z-index: 0;
+    text-align: center;
+    font: 15px Courier New, sans-serif;
+}
+
+.title {
+    text-align: center;
+    font: 15px Courier New, sans-serif;
+}
+
+#legend {
+    position: absolute;
+    z-index: -1;
+}
+
+#tooltip {
+    text-align: center;
+    font: 15px Courier New, sans-serif;
+    padding: 5px;
+    font-size: 10;
+    color: white;
+    background-color: #99182C;
+    border: 2px solid black;
+    z-index: 1;
+    visibility: hidden;
+}
