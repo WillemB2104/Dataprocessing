@@ -52,23 +52,25 @@ d3.json("data.json", function(error, json) {
         color = '#' + r_rgb + g_rgb + b_rgb;
         return color;
     }
-    $("#container1").datamap({
-       scope: 'world',
-       geography_config: {
-         borderColor: 'rgba(255,255,255,0.3)',
-         highlightBorderColor: 'rgba(0,0,0,0.5)',
-         popupTemplate: _.template([
-           '<div class="hoverinfo">',
-           '<% if (data.name) { %>',
-           '<strong><%= data.name %></strong><br/>',
-           'Area (km): <%= data.area %><br/>',
-           'Total population: <%= data.total_pop %><br/>',
-           'Population density: <%= data.pop_dens %><br/> <% } else { %>',
-           '<%= geography.properties.name %>  <% } %>',
-           '</div>'
-          ].join('') )
-       },
-       fills: fillsdict,
-       data: datadict
-       });
+
+    myMap = $("#container1").datamap({
+        scope: 'world',
+        element: document.getElementById('container1'),
+        geography_config: {
+            borderColor: 'rgba(255,255,255,0.3)',
+            highlightBorderColor: 'rgba(0,0,0,0.5)',
+            popupTemplate: _.template([
+                '<div class="hoverinfo">',
+                '<% if (data.name) { %>',
+                '<strong><%= data.name %></strong><br/>',
+                'Area (km): <%= data.area %><br/>',
+                'Total population: <%= data.total_pop %><br/>',
+                'Population density: <%= data.pop_dens %><br/> <% } else { %>',
+                '<%= geography.properties.name %>  <% } %>',
+                '</div>'
+            ].join('') )
+        },
+        fills: fillsdict,
+        data: datadict
+    });
 });
