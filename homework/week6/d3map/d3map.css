@@ -1,0 +1,35 @@
+body {
+  font: 10px sans-serif;
+}
+
+.title {
+    text-align: center;
+    font: 15px Courier New, sans-serif;
+}
+
+#container1 {
+    margin: auto;
+    width: 60%;
+    border:2px solid #000000;
+    padding: 10px;
+    z-index: 0;
+    text-align: center;
+    font: 15px Courier New, sans-serif;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.x.axis path {
+  display: none;
+}
+
+.line {
+  fill: none;
+  stroke: steelblue;
+  stroke-width: 1.5px;
+}

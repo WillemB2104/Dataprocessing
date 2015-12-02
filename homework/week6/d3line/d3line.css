@@ -1,0 +1,26 @@
+body {
+  font: 12px sans-serif;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.line {
+  fill: none;
+  stroke: orange;
+  stroke-width: 1.5px;
+}
+
+.crosshair_Line {
+  fill: none;
+  stroke: black;
+  stroke-width: 1.5px;
+}
+
+.crosshair_Circle {
+  fill: black;
+}
