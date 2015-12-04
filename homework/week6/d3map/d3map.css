@@ -4,7 +4,12 @@ body {
 
 .title {
     text-align: center;
-    font: 15px Courier New, sans-serif;
+    font: 20px Courier New, sans-serif;
+}
+
+.footer{
+    text-align: center;
+    font: 14px Courier New, sans-serif;
 }
 
 #container1 {

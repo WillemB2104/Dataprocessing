@@ -78,4 +78,5 @@ d3.json("data.json", function(error, json) {
         fills: fillsdict,
         data: datadict,
     });
+    myMap.legend();
 });
