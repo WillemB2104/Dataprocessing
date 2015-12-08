@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Dasboard</title>
+    <link rel="stylesheet" type="text/css" href="dashboard.css">
+</head>
+<body>
+    <div class="title"> <strong> GDP (in US$) per country</strong> </div>
+    <div id="tooltip">
+        <div id="tooltiptext">
+        Willem Bruin - 10209735 <br><br>
+        Dataprocessing week 7: Dashboard <br><br>
+            Compare the Gross Domestic Product (GDP in billion US$) of different countries in the world map as shown to the right. Select a country to display its annual fertility rates since the year of 1960.
+            Countries with higher GDP tend to have lower births per woman. This inverse correlation found between wealth and fertility is called the demographic-economic paradox.
+            <br><br><br><br><br><br><br>
+            Year:
+            <select id="mySelect"> </select>
+            <button type="button" onclick="drawWorldmap()">Update Map</button>
+            <br><br>
+            Data was acquired from http://data.worldbank.org/
+
+        </div>
+        <div id="tooltipcontainer"> </div>
+    </div>
+    <div class="container">
+        <div id="container1" style="position: relative; height: 400px; width: 960px"> </div>
+        <div id="container2" style="position: relative"> </div>
+    </div>
+    <!-- Datamaps Source -->
+    <script src="d3.js" charset="utf-8"></script>
+    <script src="topojson.js"></script>
+    <script src="datamaps-all.js"></script>
+    <script src="countries.js"></script>
+    <script src="dashboard.js"></script>
+</body>
+</html>
