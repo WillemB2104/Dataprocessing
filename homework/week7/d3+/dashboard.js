@@ -105,7 +105,7 @@ d3.json("GDPdata.json", function(error, json) {
             geographyConfig: {
                 borderColor: 'rgba(0,0,0,0.3)',
                 highlightFillColor: 'rgba(252, 78, 42,1)',
-                highlightBorderColor: 'rgba(0,0,0,0.9)',
+                highlightBorderColor: 'rgba(0,0,0,0.3)',
                 popupTemplate: function(geo, data) {
                     if (!data) {
                         return ['<div class="hoverinfo">',
@@ -280,7 +280,7 @@ var drawBirthGraph = function (country) {
             .attr("dx", -5)
             .attr("dy", -5)
             .attr("text-anchor", "start")
-            .text(format(date) + ', ' + birthrate + ' births per woman, ')
+            .text(format(date) + ', ' + birthrate + ' births per woman')
             .attr("fill", "black")
             .style("font-size","15px")
             .style("font-weight", "bold")
